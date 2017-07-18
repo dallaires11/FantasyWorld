@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<races xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<race>
+		<nom>Demi-Elfe</nom>
+		<pret>true</pret>
+		<description>Les demi-elfes oscillent souvent entre les deux mondes de leurs parents et mêlent la grâce aux contradictions.
+Leur héritage dual et leurs dons naturels en font de brillants diplomates et de bons émissaires de la paix,
+mais ils se laissent souvent envahir par une immense mélancolie et s’isolent en comprenant qu’ils ne font ni
+partie de la société humaine ni de la société elfique.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Elfique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Demi-Orc</nom>
+		<pret>true</pret>
+		<description>Les demi-orques sont souvent féroces et sauvages,parfois nobles et résolus,et peuvent faire preuve des meilleures
+qualités comme des pires défauts des deux races qui leur ont donné naissance.Beaucoup de demi-orques luttent pour
+maîtriser leurs élans bestiaux et incarner les valeurs les plus nobles de l’humanité.Malheureusement,de nombreuses
+personnes considèrent les demi-orques comme des abominations désespérément dépourvues de tout sens civil ou comme
+des monstres qui ne méritent ni pitié ni pourparlers.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Orc</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Elfe</nom>
+		<pret>true</pret>
+		<description>Grands,nobles et souvent hautains,les elfes à la longue espérance de vie sont les maîtres subtils de la nature.
+Ils excellent dans les arts magiques et utilisent souvent leur lien inné avec la nature pour inventer de nouveaux
+sorts et fabriquer de merveilleux objets qui,comme leurs créateurs,semblent presque hors d’atteinte des ravages
+du temps.Les elfes forment une race secrète et souvent introvertie,qui donne parfois l’impression d’être imperméable
+aux suppliques d’autrui.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>2</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Elfique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Gnome</nom>
+		<pret>true</pret>
+		<description>Ces petites gens exilés originaires de l’étrange monde des fées sont réputés pour être frivoles et excentriques.
+De nombreux gnomes sont des artisans et des rétameurs capricieux qui fabriquent des objets bizarres alimentés par
+la puissance de la magie,de l’alchimie ou par leur singulière imagination.Ils ont toujours soif de nouvelles
+expériences,ce qui leur attire souvent des ennuis.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,Gnome</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Halfelin</nom>
+		<pret>true</pret>
+		<description>Les membres de cette race de petite taille tirent leur force de leur famille,de leur communauté et de leur chance,
+qui semble absolument inépuisable.Leur insatiable curiosité entre souvent en conflit avec leur bon sens,mais
+ce sont d’éternels optimistes et des opportunistes rusés qui disposent d’un talent incroyable pour se sortir
+des pires situations.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,Halfelin</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Humain</nom>
+		<pret>true</pret>
+		<description>Ambitieux,parfois héroïques,mais toujours confiants,les humains sont capables de travailler ensemble pour atteindre
+des objectifs communs,ce qui fait d’eux une puissance à ne pas négliger.Ils ont une espérance de vie réduite par
+rapport aux autres races,mais leur énergie sans limites et leurs passions leur permettent d’accomplir beaucoup de
+choses malgré leur brève existence.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Nain</nom>
+		<pret>true</pret>
+		<description>On pense souvent que ces défenseurs des forteresses montagneuses petits et râblés sont sévères et dépourvus de tout
+sens de l’humour.Ils sont connus pour extraire les trésors du sol et fabriquer de merveilleux objets métalliques,
+parfois incrustés de gemmes,et pour avoir une affinité particulière avec les richesses cachées dans les entrailles
+de la terre.Les nains ont aussi tendance à s’isoler et à se replier sur leurs traditions,au point de sombrer
+parfois dans la xénophobie.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,Nain</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Aasimar</nom>
+		<pret>false</pret>
+		<description>Créatures bénies d’un lignage céleste,les aasimars paraissent humains,à l’exception de quelques particularités exotiques qui trahissent leur origine étrangère.Si les aasimars sont presque toujours beaux et semblent autant appartenir à l’humanité qu’ils s’en distinguent,tous ne sont pas d’alignement Bon,bien qu’ils soient rarement Mauvais.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Celeste</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Aquatique</nom>
+		<pret>false</pret>
+		<description>Survivants d’une culture terrestre dont la patrie fut détruite,les aquatiques furent sauvés et transformés par les aboleths en une race amphibie.S’ils apparaissent presque humains de bien des manières,leurs yeux d’un mauve éclatant et leurs branchies les trahissent.Solitaires et suspicieux,les aquatiques savent que le jour viendra où les aboleths réclameront la dette qui leur est due.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Aboleth</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Dhampir</nom>
+		<pret>false</pret>
+		<description>Rejetons maudits des vampires,les dhampirs sont des créatures vivantes marquées par la malédiction de la mort-vivance,qui les rend vulnérables à l’énergie positive,mais leur permet de se soigner grâce à l’énergie négative.Si beaucoup de membres de cette race embrassent leur côté sombre,les autres sont profondément déterminés à se rebeller contre leur corruption,traquant et détruisant les vampires et leurs semblables.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Doppleganger</nom>
+		<pret>false</pret>
+		<description>Enfants des guenaudes et de leurs amants mortels,les dopplegangers sont abandonnées et élevées par des parents de substitution.Lorsqu’elles atteignent la puberté, les dopplegangers,toujours de sexe féminin,répondent toutes à un appel spirituel pour découvrir leurs véritables origines.Grandes et minces,les cheveux sombres et les yeux vairons,les dopplegangers sont étrangement séduisantes.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,LangueParent</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Drakéide</nom>
+		<pret>false</pret>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Draconique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Drow</nom>
+		<pret>false</pret>
+		<description>Sombre reflet des elfes de la surface,les drows sont des chasseurs de l’ombre qui se battent pour éteindre la lumière du monde.Puissantes créatures magiques servant généralement les démons,seule leur nature chaotique les empêche de devenir une menace plus grande encore.Certains renoncent à la société dépravée et nihiliste de leur race pour emprunter la voie des héros.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>CommunDesProfondeurs,Elfique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Duergars</nom>
+		<pret>false</pret>
+		<description>Nains des profondeurs à la peau grise, détestant leurs cousins plus clairs de peau,les duergars considèrent la vie comme un labeur constant qui ne s’achève que dans la mort.Bien que ces nains soient généralement maléfiques,l’honneur et le respect de la parole donnée signifient tout pour eux,et certains font des compagnons d’aventures loyaux.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>-4</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,CommunDesProfondeurs,Nain</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Fetchelin</nom>
+		<pret>false</pret>
+		<description>Il y a longtemps,les fetchelins étaient des humains qui furent exilés sur le plan de l’Ombre,mais l’obscurité constante de celui-ci les a transformés en une race différente.Ces créatures ont développé la capacité de fusionner avec les ombres et ont une affinité naturelle avec la magie des ombres.Les fetchelins,qui se définissent eux-mêmes comme les kayal,servent souvent d’émissaires entre les habitants du plan de l’Ombre et ceux du plan Matériel.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Gobelin</nom>
+		<pret>false</pret>
+		<description>Pyromanes fous se livrant généralement à une indicible violence,les gobelins sont les plus petits des races gobelinoïdes.S’ils adorent s’amuser,leur humour est souvent cruel et blessant.Les gobelins aventureux luttent constamment contre leur côté sombre et malicieux afin de s’adapter aux autres races.Peu y parviennent vraiment.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>4</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Gobelin</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Gripplis</nom>
+		<pret>false</pret>
+		<description>Hommes-grenouilles sournois ayant la capacité de se camoufler parmi les marais et les tourbières,les gripplis restent généralement sur leurs terres humides et communiquent rarement avec le monde extérieur.Le principal motif qui les pousse à quitter leurs environnements marécageux,c’est le commerce de métal et de gemmes.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Grippli</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Hobgobelin</nom>
+		<pret>false</pret>
+		<description>Ces créatures sont les plus disciplinées et militarisées des races gobelinoïdes.Grands,solides comme des rocs et de constitution robuste,les hobgobelins seraient une bénédiction pour les groupes d’aventuriers sans leur tendance à la cruauté,à la malice et à l’esclavagisme.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Gobelin</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Ifrit</nom>
+		<pret>false</pret>
+		<description>Les ifrits sont une race qui descend des mortels et des étranges habitants du plan du Feu.Leurs caractéristiques physiques et leur personnalité trahissent souvent leurs origines flamboyantes:ils sont généralement nerveux,indépendants et impérieux.Souvent écartés des villes à cause de leur capacité à manipuler le feu,les ifrits font de puissants ensorceleurs du feu et des guerriers capables de manier les flammes comme nulle autre race.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Igné</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Kajit</nom>
+		<pret>false</pret>
+		<description>Race de gracieux explorateurs,les hommes-félins ont l’esprit de clan,mais n’en sont pas moins de nature curieuse.Ils s’entendent généralement bien avec les races qui les traitent correctement et respectent leurs frontières.Ils adorent l’exploration,tant physique qu’intellectuelle,et font généralement des aventuriers nés.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Huline</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Kitsune</nom>
+		<pret>false</pret>
+		<description>Ces hommes-renards métamorphes partagent le même amour de l’espièglerie,de l’art et des douceurs de la vie.Ils peuvent apparaître comme de simples humains ainsi que sous leur véritable forme,des humanoïdes semblables à des renards.Les kitsune sont des créatures vives d’esprit,agiles et grégaires:pour cette raison,un grand nombre d’entre eux deviennent des aventuriers.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Sylvestre</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Kobold</nom>
+		<pret>false</pret>
+		<description>Se considérant comme les rejetons des dragons,les kobolds sont tout petits,mais ont un ego immense.Certains présentent plus de caractéristiques draconiques que leurs semblables,et beaucoup sont de puissants ensorceleurs,d’habiles alchimistes et d’astucieux roublards.</description>
+		<bonusFor>-4</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Draconique</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Nagaji</nom>
+		<pret>false</pret>
+		<description>D’après les légendes,les nagas auraient créé les nagajis pour en faire une race de serviteurs,et les nagajis vénèreraient leurs créateurs comme des dieux vivants.Du fait de leur nature reptilienne et de leurs curieuses manières,ces étranges créatures à écailles inspirent la peur et l’émerveillement chez tous ceux qui n’appartiennent pas à leur genre.Ils sont résistants aux poisons et aux effets magiques mentaux.</description>
+		<bonusFor>2</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>-2</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Draconique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Ondin</nom>
+		<pret>false</pret>
+		<description>Comme leurs cousins les ifrits,les oréades et les sylphes,les ondins sont des humains qui ont été touchés par les éléments planaires.Ce sont les enfants de l’eau élémentaire,aussi gracieux sur la terre que dans l’eau.Les ondins ont une grande faculté d’adaptation,résistent bien au froid et ont une affnité avec la magie de l’eau.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Aquatique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Orc</nom>
+		<pret>false</pret>
+		<description>Sauvages,brutaux et résistants,les orques sont souvent le fléau des lointaines étendues naturelles et des grottes profondes.Beaucoup deviennent de redoutables barbares, du fait de leur stature musculeuse et de leur tendance à entrer dans des rages sanglantes.Les quelques rares qui parviennent à contrôler leur soif de sang font d’excellents aventuriers.</description>
+		<bonusFor>4</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>-2</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Orc</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Oréade</nom>
+		<pret>false</pret>
+		<description>Créatures d’ascendance humaine en lesquelles coule le sang des créatures du plan de la Terre,les oréades sont aussi forts et solides que la pierre.Souvent têtus et tenaces,ils ont du mal à s’entendre avec la plupart des races autres que les nains du fait de leur nature inflexible.Les oréades font d’excellents guerriers et ensorceleurs capables de manipuler la puissance brute de la pierre et de la terre.</description>
+		<bonusFor>2</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,Terreux</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Samsaran</nom>
+		<pret>false</pret>
+		<description>Serviteurs fantomatiques du karma,les samsarans sont des créatures qui se sont réincarnées des centaines,sinon des milliers de fois dans l’espoir d’atteindre la véritable illumination.Contrairement aux humains et aux autres races,ces humanoïdes se souviennent de l’essentiel de leurs vies passées.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>2</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Samsaran</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Sirène</nom>
+		<pret>false</pret>
+		<description>Ces créatures ont la partie supérieure du corps d’un humanoïde séduisant et bien bâti,tandis que leur partie inférieure prend la forme d’une queue pourvue de nageoires. S’ils sont des nageurs amphibies extrêmement forts,la partie inférieure de leur corps leur permet difficilement d’évoluer sur la terre ferme.Les hommes-poissons peuvent se montrer farouches et solitaires.Restant généralement entre eux,ils se méfient des étrangers de la terre.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,Aquatique</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Skaven</nom>
+		<pret>false</pret>
+		<description>Ces petits humanoïdes qui ressemblent à des rats sont les maîtres nomades et claniques du commerce.Souvent bricoleurs et commerçants,ils s’intéressent davantage à l’accumulation de babioles intéressantes qu’à l’engrangement de richesses.Les hommes-rats partent souvent plus à l’aventure pour dénicher de nouvelles curiosités que pour devenir riches.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>2</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Strix</nom>
+		<pret>false</pret>
+		<description>Race déclinante chassée par les humains qui voient en eux des diables ailés,les strix sont les sombres maîtres des cieux nocturnes.Leurs conflits territoriaux ont alimenté leur haine pour les humains.Du fait de ces querelles interminables,ces créatures de la nuit les attaquent souvent à vue.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Strix</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Suli</nom>
+		<pret>false</pret>
+		<description>Aussi appelés les suli-janns,ces humanoïdes sont les enfants des mortels et des janns.Ces êtres puissants et charismatiques manifestent leur capacité à maîtriser les puissances élémentaires à l’adolescence,ce qui leur permet de manipuler la terre,le feu,la glace ou l’électricité.Cette puissance élémentaire a également tendance à se refléter dans la personnalité du suli.</description>
+		<bonusFor>2</bonusFor>
+		<bonusDex>0</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>-2</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,LangueElementaire</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Svirfneblin</nom>
+		<pret>false</pret>
+		<description>Gnomes gardant leurs enclaves cachées dans de sombres tunnels et cavernes loin sous la terre,les svirfneblins sont aussi sérieux que leurs cousins de la surface sont fantasques.Ils sont résistants à la magie des ignobles créatures qui partagent leurs souterrains,et manient une puissante magie de protection.Les svirfneblins se méfient des étrangers et se cachent souvent à leur approche.</description>
+		<bonusFor>-2</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>CommunDesProfondeurs,Gnome</langues>
+		<taille>P</taille>
+	</race>
+	<race>
+		<nom>Sylphe</nom>
+		<pret>false</pret>
+		<description>Peuple éthéré de l’air,les sylphes sont le fruit du mélange entre le sang humain et celui des élémentaires de l’Air.Comme les ifrits,les oréades et les ondins,ils peuvent devenir de puissants ensorceleurs maîtrisant leur domaine élémentaire particulier.Ils sont souvent beaux et minces,et ont tendance à écouter aux portes.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>2</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Aérien</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Tengu</nom>
+		<pret>false</pret>
+		<description>Ces humanoïdes charognards qui ressemblent à des corbeaux excellent dans le mimétisme et le combat à l’épée.Formant des nids dans les villes densément peuplées,les tengus rejoignent parfois des groupes d’aventuriers par curiosité ou par nécessité.Leur nature impulsive et leurs curieuses habitudes sont souvent déconcertantes pour ceux qui n’y sont pas habitués.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>-2</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Tengu</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Tieffelin</nom>
+		<pret>false</pret>
+		<description>Race variée et souvent méprisée par la société humanoïde,les tieffelins sont des mortels corrompus du sang des fiélons.Les autres races leur font rarement confiance,et ce manque d’empathie pousse souvent les tieffelins à embrasser la voie du Mal,de la dépravation et de la rage qui bouillonne dans leur sang corrompu.Certains considèrent la lutte pour étouffer leurs sombres désirs comme une motivation pour emprunter la voie des grands héros.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>2</bonusInt>
+		<bonusSag>0</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Abyssal/Infernal</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>vanara</nom>
+		<pret>false</pret>
+		<description>Ces humanoïdes simiesques et espiègles vivent dans les jungles et les forêts chaudes.Couverts d’une douce fourrure et pourvus d’une queue préhensile et de pieds ressemblant à des mains,les vanaras sont de puissants grimpeurs.Ces créatures se sentent chez elles au sol comme au sommet des arbres.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>2</bonusSag>
+		<bonusCha>-2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Vanara</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Vishkanya</nom>
+		<pret>false</pret>
+		<description>Étrangement beaux à l’extérieur et venimeux à l’intérieur,les vishkanyas voient le monde à travers les fentes de leurs yeux de serpent.Ils possèdent la même grâce que le serpent et la capacité à se glisser facilement hors de l’étreinte de leurs ennemis.Les vishkanyas ont la réputation d’être séducteurs et manipulateurs.Ils peuvent se servir de leur salive ou de leur sang pour empoisonner leurs armes.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>0</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>2</bonusCha>
+		<vitesse>9</vitesse>
+		<langues>Commun,Vishkanyan</langues>
+		<taille>M</taille>
+	</race>
+	<race>
+		<nom>Wayang</nom>
+		<pret>false</pret>
+		<description>Les petits wayangs sont des créatures du plan de l’Ombre.Ils sont si sensibles à l’ombre que celle-ci imprègne même leur philosophie:ils croient qu’au moment de leur mort,ils s’en retournent simplement aux ténèbres.Le mystère de leur existence insondable leur accorde la capacité à guérir de l’énergie négative comme de l’énergie positive.</description>
+		<bonusFor>0</bonusFor>
+		<bonusDex>2</bonusDex>
+		<bonusCon>0</bonusCon>
+		<bonusInt>2</bonusInt>
+		<bonusSag>-2</bonusSag>
+		<bonusCha>0</bonusCha>
+		<vitesse>6</vitesse>
+		<langues>Commun,Wayang</langues>
+		<taille>P</taille>
+	</race>
+</races>
