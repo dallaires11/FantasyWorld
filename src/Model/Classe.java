@@ -1,10 +1,13 @@
 package Model;
 
 public class Classe {
-    private String nom;
+    private String nom,description;
+    private  int dVie;
 
-    public Classe(String nom){
+    public Classe(String nom,int dVieParNiveau,String description){
         this.nom = nom;
+        dVie = dVieParNiveau;
+        this.description = description;
     }
 
     public String getNom(){
@@ -12,7 +15,7 @@ public class Classe {
     }
 
     public String getDescription(){
-        return "werty";
+        return description;
     }
 
 }

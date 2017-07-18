@@ -27,4 +27,40 @@ public class Race {
     public String getDescription(){
         return description;
     }
+    public int getBonusFor(){
+        return bonusFor;
+    }
+    public int getBonusDex(){
+        return bonusDex;
+    }
+    public int getBonusCon(){
+        return bonusCon;
+    }
+    public int getBonusInt(){
+        return bonusInt;
+    }
+    public int getBonusSag(){
+        return bonusSag;
+    }
+    public int getBonusCha(){
+        return bonusCha;
+    }
+    public int getStat(String stat){
+        switch (stat){
+            case "for":
+                return getBonusFor();
+            case "dex":
+                return getBonusDex();
+            case "con":
+                return getBonusCon();
+            case "int":
+                return getBonusInt();
+            case "sag":
+                return getBonusSag();
+            case "cha":
+                return getBonusCha();
+            default:
+                return 0;
+        }
+    }
 }

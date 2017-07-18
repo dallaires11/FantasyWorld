@@ -77,7 +77,9 @@ public class Codex {
                     Element eElement = (Element) nNode;
                     if (eElement.getElementsByTagName("pret").item(0).getTextContent().equalsIgnoreCase("true")){
                         String nom = eElement.getElementsByTagName("nom").item(0).getTextContent();
-                        classes.add(new Classe(nom));
+                        int dVie = Integer.parseInt(eElement.getElementsByTagName("dVie").item(0).getTextContent());
+                        String description = eElement.getElementsByTagName("description").item(0).getTextContent();
+                        classes.add(new Classe(nom,dVie,description));
                     }
                 }
 

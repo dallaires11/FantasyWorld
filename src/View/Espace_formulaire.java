@@ -13,7 +13,7 @@ import javafx.scene.layout.VBox;
 public class Espace_formulaire {
     private Group formulaire;
     private boolean monstreous;
-    private TextField nom,divinite,taille,age;
+    private TextField nom,divinite,age;
     private TextArea backStory;
     private ComboBox<String> race,classe,corpulence,eye_color,hair_color;
     private CheckBox genderM,genderF,croyant;
@@ -25,12 +25,7 @@ public class Espace_formulaire {
             raceLabel,backStoryLabel,genderLabel,stat,forLabel,dexLabel,consLabel,intLabel,wisLabel,chaLabel,forLabel2,
             dexLabel2, consLabel2,intLabel2,wisLabel2,chaLabel2;
     private Button openViewer,randomizeStat;
-    private Spinner<Integer> forTir;
-    private Spinner<Integer> dexTir;
-    private Spinner<Integer> consTir;
-    private Spinner<Integer> intTir;
-    private Spinner<Integer> wisTir;
-    private Spinner<Integer> chaTir;
+    private Spinner<Integer> forTir,dexTir,consTir,intTir,sagTir,chaTir,taille;
     private Profile profile;
     private Codex codex;
 
@@ -78,7 +73,7 @@ public class Espace_formulaire {
         corpulence = new ComboBox<>();
         eye_color = new ComboBox<>();
         hair_color = new ComboBox<>();
-        taille = new TextField();
+        taille = new Spinner<>(0.05,9999999,1.70,0.05);
         divinite = new TextField();
         croyant = new CheckBox();
         classe = new ComboBox<>();
@@ -108,32 +103,32 @@ public class Espace_formulaire {
 
         forLabel = new Label("FOR:  ");
         forTir = new Spinner<Integer>(0,20,10);
-        forLabel2 = new Label(" + 0 = 0 (Mod: 0)");
+        forLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxFor.getChildren().addAll(forLabel,forTir,forLabel2);
 
         dexLabel = new Label("DEX:  ");
         dexTir = new Spinner<>(0,20,10);
-        dexLabel2 = new Label(" + 0 = 0 (Mod: 0)");
+        dexLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxDex.getChildren().addAll(dexLabel,dexTir,dexLabel2);
 
         consLabel = new Label("CON: ");
         consTir = new Spinner<>(0,20,10);
-        consLabel2 = new Label(" + 0 = 0 (Mod: 0)");
+        consLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxCons.getChildren().addAll(consLabel,consTir,consLabel2);
 
         intLabel = new Label("INT:   ");
         intTir = new Spinner<Integer>(0,20,10);
-        intLabel2 = new Label(" + 0 = 0 (Mod: 0)");
+        intLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxInt.getChildren().addAll(intLabel,intTir,intLabel2);
 
         wisLabel = new Label("SAG:  ");
-        wisTir = new Spinner<Integer>(0,20,10);
-        wisLabel2 = new Label(" + 0 = 0 (Mod: 0)");
-        hboxWis.getChildren().addAll(wisLabel,wisTir,wisLabel2);
+        sagTir = new Spinner<Integer>(0,20,10);
+        wisLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
+        hboxWis.getChildren().addAll(wisLabel,sagTir,wisLabel2);
 
         chaLabel = new Label("CHA:  ");
         chaTir = new Spinner<>(0,20,10);
-        chaLabel2 = new Label(" + 0 = 0 (Mod: 0)");
+        chaLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxCha.getChildren().addAll(chaLabel,chaTir,chaLabel2);
 
         vbox2.getChildren().addAll(stat,hboxFor,hboxDex,hboxCons,hboxInt,hboxWis,hboxCha,randomizeStat);
@@ -165,7 +160,6 @@ public class Espace_formulaire {
         eye_color.getSelectionModel().selectFirst();
         hair_color.getItems().addAll("brun","noir","roux","blond","rouge","vert","bleu","blanc");
         hair_color.getSelectionModel().selectFirst();
-        taille.setPromptText("X");
         for (Classe classeCodex: codex.getClasses()) {
             classe.getItems().add(classeCodex.getNom());
         }
@@ -179,7 +173,7 @@ public class Espace_formulaire {
                 super.updateItem(item, empty);
                 if (item != null) {
                     setText(item);
-                    setTooltip(codex.getG_5TA8().giveMeTooltip(item,"race"));
+                    setTooltipS(this,"race",item);
                 }
                 else {
                     setText(null);
@@ -193,7 +187,7 @@ public class Espace_formulaire {
                 super.updateItem(item, empty);
                 if (item != null) {
                     setText(item);
-                    setTooltip(codex.getG_5TA8().giveMeTooltip(item,"classe"));
+                    setTooltipS(this,"classe",item);
                 }
                 else {
                     setText(null);
@@ -201,14 +195,14 @@ public class Espace_formulaire {
                 }
             }
         });
-        setTooltip(race,"race",race.getValue());
-        setTooltip(classe,"classe",classe.getValue());
+        setTooltipS(race,"race",race.getValue());
+        setTooltipS(classe,"classe",classe.getValue());
 
         forTir.setMaxWidth(55);
         dexTir.setMaxWidth(55);
         consTir.setMaxWidth(55);
         intTir.setMaxWidth(55);
-        wisTir.setMaxWidth(55);
+        sagTir.setMaxWidth(55);
         chaTir.setMaxWidth(55);
     }
     private void setAction(){
@@ -216,8 +210,11 @@ public class Espace_formulaire {
             boolean selected = croyant.isSelected();
             divinite.setDisable(!selected);
         });
-        race.valueProperty().addListener((observable, oldValue, newValue) -> setTooltip(race,"race",race.getValue()));
-        classe.valueProperty().addListener((observable, oldValue, newValue) -> setTooltip(classe,"classe",classe.getValue()));
+        race.valueProperty().addListener((observable, oldValue, newValue) -> {
+            setTooltipS(race,"race",race.getValue());
+            updateStat();
+        });
+        classe.valueProperty().addListener((observable, oldValue, newValue) -> setTooltipS(classe,"classe",classe.getValue()));
 
         randomizeStat.setOnAction(event -> {
             int[] statTemp;
@@ -226,18 +223,44 @@ public class Espace_formulaire {
             dexTir.getValueFactory().setValue(statTemp[1]);
             consTir.getValueFactory().setValue(statTemp[2]);
             intTir.getValueFactory().setValue(statTemp[3]);
-            wisTir.getValueFactory().setValue(statTemp[4]);
+            sagTir.getValueFactory().setValue(statTemp[4]);
             chaTir.getValueFactory().setValue(statTemp[5]);
         });
+        forTir.valueProperty().addListener(((observable, oldValue, newValue) -> updateStat()));
+        dexTir.valueProperty().addListener(((observable, oldValue, newValue) -> updateStat()));
+        consTir.valueProperty().addListener(((observable, oldValue, newValue) -> updateStat()));
+        intTir.valueProperty().addListener(((observable, oldValue, newValue) -> updateStat()));
+        sagTir.valueProperty().addListener(((observable, oldValue, newValue) -> updateStat()));
+        chaTir.valueProperty().addListener(((observable, oldValue, newValue) -> updateStat()));
         openViewer.setOnAction(t -> new Stage2());
     }
 
-    private void setTooltip(Node node,String section,String nom){
+    private void setTooltipS(Node node,String section,String nom){
         final Tooltip t = codex.getG_5TA8().giveMeTooltip(nom,section);
         node.setOnMouseEntered(event -> {
             Point2D p = node.localToScreen(node.getLayoutBounds().getMaxX()-20, node.getLayoutBounds().getMaxY()-7); //I position the tooltip at bottom right of the node (see below for explanation)
             t.show(node, p.getX(), p.getY());
         });
         node.setOnMouseExited(event -> t.hide());
+    }
+    private void updateStat(){
+        int forBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"for");
+        int forTotal = forTir.getValue()+forBonus;
+        forLabel2.setText(" + Racial: "+forBonus+" = "+forTotal+" (Mod:"+Charactéristique.getMod(forTotal)+")");
+        int dexBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"dex");
+        int dexTotal = dexTir.getValue()+dexBonus;
+        dexLabel2.setText(" + Racial: "+dexBonus+" = "+dexTotal+" (Mod:"+Charactéristique.getMod(dexTotal)+")");
+        int conBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"con");
+        int conTotal = consTir.getValue()+conBonus;
+        consLabel2.setText(" + Racial: "+conBonus+" = "+conTotal+" (Mod:"+Charactéristique.getMod(conTotal)+")");
+        int intBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"int");
+        int intTotal = intTir.getValue()+intBonus;
+        intLabel2.setText(" + Racial: "+intBonus+" = "+intTotal+" (Mod:"+Charactéristique.getMod(intTotal)+")");
+        int sagBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"sag");
+        int sagTotal = sagTir.getValue()+sagBonus;
+        wisLabel2.setText(" + Racial: "+sagBonus+" = "+sagTotal+" (Mod:"+Charactéristique.getMod(sagTotal)+")");
+        int chaBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"cha");
+        int chaTotal = chaTir.getValue()+chaBonus;
+        chaLabel2.setText(" + Racial: "+chaBonus+" = "+chaTotal+" (Mod:"+Charactéristique.getMod(chaTotal)+")");
     }
 }

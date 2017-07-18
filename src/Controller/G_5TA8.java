@@ -34,8 +34,17 @@ public class G_5TA8 {
                 }
             }
         }
-
         Tooltip tp = new Tooltip(description);
         return tp;
+    }
+    public int giveMeBonus(String nom,String stat){
+        int bonusStat = 0;
+        for (Race raceSearch: races) {
+            if (raceSearch.getNom().equalsIgnoreCase(nom)) {
+                bonusStat = raceSearch.getStat(stat);
+                break;
+            }
+        }
+        return bonusStat;
     }
 }
