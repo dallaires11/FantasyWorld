@@ -1,5 +1,6 @@
 package View;
 
+import Controller.CalculStat;
 import Controller.Stage2;
 import Model.*;
 import javafx.geometry.Point2D;
@@ -99,7 +100,7 @@ public class Espace_formulaire {
         hboxWis = new HBox();
         hboxCha  = new HBox();
 
-        stat = new Label("Charactéristique");
+        stat = new Label("CalculStat");
 
         forLabel = new Label("FOR:  ");
         forTir = new Spinner<Integer>(0,20,10);
@@ -218,7 +219,7 @@ public class Espace_formulaire {
 
         randomizeStat.setOnAction(event -> {
             int[] statTemp;
-            statTemp = Charactéristique.randomizerStat();
+            statTemp = CalculStat.randomizerStat();
             forTir.getValueFactory().setValue(statTemp[0]);
             dexTir.getValueFactory().setValue(statTemp[1]);
             consTir.getValueFactory().setValue(statTemp[2]);
@@ -246,21 +247,21 @@ public class Espace_formulaire {
     private void updateStat(){
         int forBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"for");
         int forTotal = forTir.getValue()+forBonus;
-        forLabel2.setText(" + Racial: "+forBonus+" = "+forTotal+" (Mod:"+Charactéristique.getMod(forTotal)+")");
+        forLabel2.setText(" + Racial: "+forBonus+" = "+forTotal+" (Mod:"+ CalculStat.getMod(forTotal)+")");
         int dexBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"dex");
         int dexTotal = dexTir.getValue()+dexBonus;
-        dexLabel2.setText(" + Racial: "+dexBonus+" = "+dexTotal+" (Mod:"+Charactéristique.getMod(dexTotal)+")");
+        dexLabel2.setText(" + Racial: "+dexBonus+" = "+dexTotal+" (Mod:"+ CalculStat.getMod(dexTotal)+")");
         int conBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"con");
         int conTotal = consTir.getValue()+conBonus;
-        consLabel2.setText(" + Racial: "+conBonus+" = "+conTotal+" (Mod:"+Charactéristique.getMod(conTotal)+")");
+        consLabel2.setText(" + Racial: "+conBonus+" = "+conTotal+" (Mod:"+ CalculStat.getMod(conTotal)+")");
         int intBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"int");
         int intTotal = intTir.getValue()+intBonus;
-        intLabel2.setText(" + Racial: "+intBonus+" = "+intTotal+" (Mod:"+Charactéristique.getMod(intTotal)+")");
+        intLabel2.setText(" + Racial: "+intBonus+" = "+intTotal+" (Mod:"+ CalculStat.getMod(intTotal)+")");
         int sagBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"sag");
         int sagTotal = sagTir.getValue()+sagBonus;
-        wisLabel2.setText(" + Racial: "+sagBonus+" = "+sagTotal+" (Mod:"+Charactéristique.getMod(sagTotal)+")");
+        wisLabel2.setText(" + Racial: "+sagBonus+" = "+sagTotal+" (Mod:"+ CalculStat.getMod(sagTotal)+")");
         int chaBonus = codex.getG_5TA8().giveMeBonus(race.getValue(),"cha");
         int chaTotal = chaTir.getValue()+chaBonus;
-        chaLabel2.setText(" + Racial: "+chaBonus+" = "+chaTotal+" (Mod:"+Charactéristique.getMod(chaTotal)+")");
+        chaLabel2.setText(" + Racial: "+chaBonus+" = "+chaTotal+" (Mod:"+ CalculStat.getMod(chaTotal)+")");
     }
 }

@@ -1,37 +1,39 @@
 package Model;
 
+import Controller.CalculStat;
+
 public class Profile {
     private int force,modFor,Dexterite,modDex,constitution,modCon,intelligence,modInt,sagesse,modSag,charisme,modCha;
     private String nom,age,corpulence,couleur_yeux,couleur_cheveux,divinite,gender;
 
     public void setForce(int force) {
         this.force = force;
-        modFor=Charactéristique.getMod(force);
+        modFor= CalculStat.getMod(force);
     }
 
     public void setDexterite(int dexterite) {
         Dexterite = dexterite;
-        modDex=Charactéristique.getMod(dexterite);
+        modDex= CalculStat.getMod(dexterite);
     }
 
     public void setConstitution(int modCon) {
         this.modCon = modCon;
-        modCon=Charactéristique.getMod(constitution);
+        modCon= CalculStat.getMod(constitution);
     }
 
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
-        modInt=Charactéristique.getMod(intelligence);
+        modInt= CalculStat.getMod(intelligence);
     }
 
     public void setSagesse(int sagesse) {
         this.sagesse = sagesse;
-        modSag=Charactéristique.getMod(sagesse);
+        modSag= CalculStat.getMod(sagesse);
     }
 
     public void setCharisme(int charisme) {
         this.charisme = charisme;
-        modCha=Charactéristique.getMod(charisme);
+        modCha= CalculStat.getMod(charisme);
     }
 
     public void setAge(String age) {

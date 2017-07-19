@@ -16,13 +16,15 @@ import java.io.IOException;
 public class Viewer {
     private Scene scene;
     private MenuBar menuBar;
-    private Menu menuSave;
+    private MenuItem menuItemSave;
     private Group imageScene;
 
     public Viewer(){
         menuBar = new MenuBar();
-        menuSave = new Menu("Enregistrer");
-        menuBar.getMenus().addAll(menuSave);
+        Menu menuFichier = new Menu("Fichier");
+        menuItemSave = new MenuItem("Enregistrer");
+        menuFichier.getItems().add(menuItemSave);
+        menuBar.getMenus().add(menuFichier);
 
         setElement();
         setAction();
@@ -37,7 +39,7 @@ public class Viewer {
         menuBar.setPrefWidth(630);
     }
     private void setAction(){
-        //
+        menuItemSave.setOnAction(event -> saveAsPng());
     }
 
     public Scene getScene(){
@@ -49,7 +51,7 @@ public class Viewer {
         WritableImage image = imageScene.snapshot(new SnapshotParameters(), null);
 
         // TODO: probably use a file chooser here
-        File file = new File("chart.png");
+        File file = new File("viewer.png");
 
         try {
             ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
