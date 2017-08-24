@@ -17,7 +17,8 @@ public class Espace_formulaire {
     private TextField nom,divinite,age;
     private TextArea backStory;
     private ComboBox<String> race,classe,corpulence,eye_color,hair_color;
-    private CheckBox genderM,genderF,croyant;
+    private RadioButton genderM,genderF;
+    private CheckBox croyant;
     private Scene scene;
     private VBox supermegabox,vbox1,vbox2;
     private HBox megaHbox,hboxnom,hboxDivinite,hboxGender,hboxCorpulence,hboxrace,hboxclasse,hboxeye,hboxhair,hboxtaille,hboxage,
@@ -55,7 +56,7 @@ public class Espace_formulaire {
 
         nomLabel =  new Label("Nom du personnage:");
         raceLabel = new Label("Race du personnage:");
-        genderLabel = new Label("Sexe:");
+        genderLabel = new Label("Sexe apparent:");
         ageLabel = new Label("Age du personnage:");
         corpulenceLabel = new Label("Corpulence:");
         eyeLabel = new Label("Couleur des yeux:");
@@ -68,8 +69,12 @@ public class Espace_formulaire {
 
         nom = new TextField();
         race = new ComboBox<>();
-        genderF = new CheckBox("F");
-        genderM = new CheckBox("M");
+        ToggleGroup tg = new ToggleGroup();
+        genderF = new RadioButton("F");
+        genderF.setToggleGroup(tg);
+        genderM = new RadioButton("M");
+        genderM.setToggleGroup(tg);
+
         age = new TextField();
         corpulence = new ComboBox<>();
         eye_color = new ComboBox<>();
@@ -154,8 +159,9 @@ public class Espace_formulaire {
             race.getItems().add(raceCodex.getNom());
         }
         race.getSelectionModel().selectFirst();
+        genderM.setSelected(true);
         age.setPromptText("Age en année");
-        corpulence.getItems().addAll("normal","petit","massif","GODBUILD");
+        corpulence.getItems().addAll("normal","GODBUILD");
         corpulence.getSelectionModel().selectFirst();
         eye_color.getItems().addAll("brun","noir","bleu","vert","rouge","gris","violet");
         eye_color.getSelectionModel().selectFirst();
