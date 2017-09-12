@@ -108,32 +108,32 @@ public class Espace_formulaire {
         stat = new Label("CalculStat");
 
         forLabel = new Label("FOR:  ");
-        forTir = new Spinner<Integer>(0,20,10);
+        forTir = new Spinner<Integer>(1,20,10);
         forLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxFor.getChildren().addAll(forLabel,forTir,forLabel2);
 
         dexLabel = new Label("DEX:  ");
-        dexTir = new Spinner<>(0,20,10);
+        dexTir = new Spinner<>(1,20,10);
         dexLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxDex.getChildren().addAll(dexLabel,dexTir,dexLabel2);
 
         consLabel = new Label("CON: ");
-        consTir = new Spinner<>(0,20,10);
+        consTir = new Spinner<>(1,20,10);
         consLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxCons.getChildren().addAll(consLabel,consTir,consLabel2);
 
         intLabel = new Label("INT:   ");
-        intTir = new Spinner<Integer>(0,20,10);
+        intTir = new Spinner<Integer>(1,20,10);
         intLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxInt.getChildren().addAll(intLabel,intTir,intLabel2);
 
         wisLabel = new Label("SAG:  ");
-        sagTir = new Spinner<Integer>(0,20,10);
+        sagTir = new Spinner<Integer>(1,20,10);
         wisLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxWis.getChildren().addAll(wisLabel,sagTir,wisLabel2);
 
         chaLabel = new Label("CHA:  ");
-        chaTir = new Spinner<>(0,20,10);
+        chaTir = new Spinner<>(1,20,10);
         chaLabel2 = new Label(" + Racial: 0 = 0 (Mod: 0)");
         hboxCha.getChildren().addAll(chaLabel,chaTir,chaLabel2);
 
@@ -205,12 +205,12 @@ public class Espace_formulaire {
         setTooltipS(race,"race",race.getValue());
         setTooltipS(classe,"classe",classe.getValue());
 
-        forTir.setMaxWidth(55);
-        dexTir.setMaxWidth(55);
-        consTir.setMaxWidth(55);
-        intTir.setMaxWidth(55);
-        sagTir.setMaxWidth(55);
-        chaTir.setMaxWidth(55);
+        forTir.setMaxWidth(65);
+        dexTir.setMaxWidth(65);
+        consTir.setMaxWidth(65);
+        intTir.setMaxWidth(65);
+        sagTir.setMaxWidth(65);
+        chaTir.setMaxWidth(65);
     }
     private void setAction(){
         croyant.setOnAction(event -> {
